@@ -199,9 +199,9 @@ function NavigationBar() {
         </StyledMobileIcon>
         <StyledNavMenu>
           <StyledNavItem href="#about">About</StyledNavItem>
+          <StyledNavItem href="#projects">Projects</StyledNavItem>
           <StyledNavItem href="#skills">Skills</StyledNavItem>
           <StyledNavItem href="#experience">Experience</StyledNavItem>
-          <StyledNavItem href="#projects">Projects</StyledNavItem>
           <StyledNavItem href="#education">Education</StyledNavItem>
         </StyledNavMenu>
 

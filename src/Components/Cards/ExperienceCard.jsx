@@ -125,6 +125,9 @@ const StyledDate = styled.div`
   @media only screen and (max-width: 768px) {
     font-size: 10px;
   }
+  @media screen and (min-width: 530px) {
+    display: none;
+  }
 `;
 
 const Skills = styled.div`
@@ -161,7 +164,7 @@ function ExperienceCard({ experience }) {
         <Body>
           <Role>{experience.role}</Role>
           <Company>{experience.company}</Company>
-          {/* <StyledDate>{experience.date}</StyledDate> */}
+          <StyledDate>{experience.date}</StyledDate>
         </Body>
       </Top>
       <Description>

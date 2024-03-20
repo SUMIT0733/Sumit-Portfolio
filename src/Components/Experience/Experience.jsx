@@ -71,6 +71,12 @@ const TimeLineSection = styled.div`
   gap: 12px;
 `;
 
+const StyledDate = styled.div`
+  @media (max-width: 530px) {
+    display: none;
+  }
+`;
+
 function Experience() {
   console.log(Experiences);
   return (
@@ -84,9 +90,12 @@ function Experience() {
               console.log(exp.company);
               return (
                 <TimelineItem key={exp.company}>
-                  <TimelineOppositeContent color={darkTheme.text_primary}>
-                    {exp.date}
-                  </TimelineOppositeContent>
+                  <StyledDate>
+                    <TimelineOppositeContent color={darkTheme.text_primary}>
+                      {exp.date}
+                    </TimelineOppositeContent>
+                  </StyledDate>
+
                   <TimelineSeparator>
                     <TimelineDot variant="outlined" color="secondary" />
                     {index !== Experience.length1 && (

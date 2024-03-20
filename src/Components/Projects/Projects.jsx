@@ -2,9 +2,6 @@ import ProjectCard from "Components/Cards/ProjectCard";
 import { projects } from "Utils/data/strings";
 import { useState } from "react";
 import styled from "styled-components";
-import PropTypes from 'prop-types';
-
-
 
 export const Container = styled.div`
   background: linear-gradient(
@@ -104,19 +101,13 @@ const CardContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-Projects.propTypes = {
-    openModal: PropTypes.func.isRequired,
-    setOpenModal: PropTypes.func.isRequired,
-};
-
-function Projects({ openModal, setOpenModal }) {
-    // component code here
+function Projects() {
+  // component code here
   const [toggle, setToggle] = useState("all");
   return (
     <Container id="projects">
       <Wrapper>
         <Title>Projects</Title>
-        <Description>Descripion of projects</Description>
         <ToggleButtonGroup>
           {toggle === "all" ? (
             <ToggleButton active value="all" onClick={() => setToggle("all")}>
@@ -127,24 +118,38 @@ function Projects({ openModal, setOpenModal }) {
               All
             </ToggleButton>
           )}
-          <Divider/>
+          <Divider />
+          {toggle === "web app" ? (
+            <ToggleButton
+              active
+              value="web app"
+              onClick={() => setToggle("web app")}
+            >
+              Web Apps
+            </ToggleButton>
+          ) : (
+            <ToggleButton value="web app" onClick={() => setToggle("web app")}>
+              Web Apps
+            </ToggleButton>
+          )}
+          <Divider />
           {toggle === "android app" ? (
             <ToggleButton
               active
               value="android app"
               onClick={() => setToggle("android app")}
             >
-              Android App
+              Android Apps
             </ToggleButton>
           ) : (
             <ToggleButton
               value="android app"
               onClick={() => setToggle("android app")}
             >
-              Android App
+              Android Apps
             </ToggleButton>
           )}
-          <Divider/>
+          <Divider />
           {toggle === "devops" ? (
             <ToggleButton
               active
@@ -159,25 +164,16 @@ function Projects({ openModal, setOpenModal }) {
             </ToggleButton>
           )}
         </ToggleButtonGroup>
+        {/* <p>Coming soon...</p> */}
         <CardContainer>
           {toggle === "all" &&
             projects.map((project) => (
-              <ProjectCard
-                key={project.title}
-                project={project}
-                openmodal={openModal}
-                setOpenmodal={setOpenModal}
-              />
+              <ProjectCard key={project.title} project={project} />
             ))}
           {projects
             .filter((project) => project.category === toggle)
             .map((project) => (
-              <ProjectCard
-                key={project.title}
-                project={project}
-                openmodal={openModal}
-                setOpenmodal={setOpenModal}
-              />
+              <ProjectCard key={project.title} project={project} />
             ))}
         </CardContainer>
       </Wrapper>

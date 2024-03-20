@@ -1,24 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
+import ReactCardFlip from "react-card-flip";
 import styled from "styled-components";
 
-const Button = styled.button`
-  display: none;
+const GitHubButton = styled.a`
   width: 100%;
   padding: 10px;
-  background-color: ${({ theme }) => theme.white};
-  color: ${({ theme }) => theme.text_black};
+  background-color: transparent;
+  border: 1px solid ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.primary};
   font-size: 14px;
-  font-weight: 700;
-  border: none;
+  text-decoration: none;
+  text-align: center;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.8s ease-in-out;
+  &:hover {
+    background-color: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.white};
+  }
 `;
+
+const DescriptionButton = styled.a`
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.primary};
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.8s ease-in-out;
+  &:hover {
+    background-color: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.white};
+  }
+`;
+
 const Card = styled.div`
   width: 330px;
   height: 490px;
   background-color: ${({ theme }) => theme.card};
-  cursor: pointer;
   border-radius: 10px;
   box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
   overflow: hidden;
@@ -26,14 +49,11 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   gap: 14px;
-  transition: all 0.5s ease-in-out;
+  transition: all ease-in-out;
   &:hover {
     transform: translateY(-10px);
     box-shadow: 0 0 50px 4px rgba(0, 0, 0, 0.6);
     filter: brightness(1.1);
-  }
-  &:hover ${Button} {
-    display: block;
   }
 `;
 
@@ -105,23 +125,90 @@ const Description = styled.div`
   text-overflow: ellipsis;
 `;
 
+const ButtonGroup = styled.div`
+  display: flex;
+  gap: 10px;
+  width: 100%;
+`;
 
-const ProjectCard = ({ project, setOpenModal }) => {
+const BackCard = styled.div`
+  width: 330px;
+  height: 490px;
+  background-color: ${({ theme }) => theme.card};
+  border-radius: 10px;
+  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  padding: 26px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  transition: all ease-in-out;
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 50px 4px rgba(0, 0, 0, 0.6);
+    filter: brightness(1.1);
+  }
+`;
+
+const FullDescription = styled.div`
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_secondary + 99};
+  margin-top: 8px;
+  display: -webkit-box;
+  text-align: justify;
+  max-width: 100%;
+`;
+
+const CloseButton = styled.div`
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  cursor: pointer;
+  &:after {
+    content: "X";
+    color: ${({ theme }) => theme.text_secondary + 99};
+    font-size: 20px;
+  }
+`;
+
+const ProjectCard = ({ project }) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  function flipCard() {
+    setIsFlipped(() => !isFlipped);
+  }
+
   return (
-    <Card onClick={() => setOpenModal({ state: true, project: project })}>
-      <Image src={project.image} />
-      <Tags>
-        {project.tags?.map((tag, index) => (
-          <Tag key={tag}>{tag}</Tag>
-        ))}
-      </Tags>
-      <Details>
-        <Title>{project.title}</Title>
-        <Date>{project.date}</Date>
-        <Description>{project.description}</Description>
-      </Details>
-      {/* <Button>View Project</Button> */}
-    </Card>
+    <ReactCardFlip flipDirection="horizontal" isFlipped={isFlipped}>
+      <Card>
+        <Image src={project.image} />
+        <Tags>
+          {project.tags?.map((tag, index) => (
+            <Tag key={tag}>{tag}</Tag>
+          ))}
+        </Tags>
+        <Details>
+          <Title>{project.title}</Title>
+          {/* <Date>{project.date}</Date> */}
+          <Description>{project.shortDesc}</Description>
+        </Details>
+        <ButtonGroup>
+          <DescriptionButton
+            href={project.description}
+            target="_blank"
+            onMouseEnter={flipCard}
+          >
+            Description
+          </DescriptionButton>
+        </ButtonGroup>
+      </Card>
+      <BackCard>
+        <CloseButton onClick={() => flipCard()} />
+        <FullDescription>{project.description}</FullDescription>
+        <GitHubButton href={project.github} target="_blank">GitHub</GitHubButton>
+      </BackCard>
+    </ReactCardFlip>
   );
 };
 

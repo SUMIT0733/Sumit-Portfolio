@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Bio } from "../../Utils/data/strings";
 import Typewriter from "typewriter-effect";
-import HeroImg from "../../images/my_photo.jpg";
+import HeroImg from "../../images/image_crop.jpg";
 import HeroBgAnimation from "Components/HeroBgAnimation/HeroBgAnimation";
 
 const HeroContainer = styled.div`
@@ -28,14 +28,15 @@ const HeroBg = styled.div`
   /* align-items: center; */
   right: 0%;
   bottom: 50;
-  left: 0%;
+  top: 70%;
+  left: 50%;
+  
   width: 85%;
   height: 100%;
   max-width: 1360px;
   overflow: hidden;
   padding: 45xp 28px;
-  top: 70%;
-  left: 50%;
+  
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 
@@ -108,7 +109,7 @@ export const Img = styled.img`
   width: 100%;
   height: 100%;
   max-width: 400px;
-  max-height: 400px;
+  max-height: 432px;
   border-radius: 50%;
   border: 2px solid ${({ theme }) => theme.primary};
 

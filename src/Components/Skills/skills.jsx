@@ -110,11 +110,10 @@ const SkillTag = styled.div`
     font-size: 14px;
     padding: 6px 12px;
   }
-`;
-
-const SkillIcon = styled.img`
-  width: 24px;
-  height: 24px;
+  &:hover {
+    border: 1px solid #854ce6;
+    color: #854ce6;
+  }
 `;
 
 const SkillName = styled.p``;
@@ -125,7 +124,7 @@ function skills() {
     <Container id="skills">
       <Wrapper>
         <Title>Skills</Title>
-        <Description>{Bio.description}</Description>
+        {/* <Description>{Bio.description}</Description> */}
         <SkillsContainer>
           {Skills.map((skill) => (
             <Tilt>

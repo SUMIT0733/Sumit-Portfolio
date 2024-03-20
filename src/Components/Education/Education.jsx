@@ -64,7 +64,7 @@ const TimelineSection = styled.div`
   align-items: center;
   justify-content: center;
   gap: 12px;
-  @media (max-width: 660px) {
+  @media (max-width: 400px) {
     align-items: end;
   }
 `;
@@ -78,8 +78,10 @@ function Education() {
           My education has been a journey of self-discovery and growth. My
           educational details are as follows.
         </Description>
+
+        <></>
         <TimelineSection>
-          <Timeline>
+          <Timeline >
             {Education_data.map((education, index) => (
               <TimelineItem key={education.date}>
                 <TimelineContent sx={{ py: "12px", px: 2 }}>
@@ -91,9 +93,9 @@ function Education() {
                     <TimelineConnector style={{ background: "#854CE6" }} />
                   )}
                 </TimelineSeparator>
-                <TimelineOppositeContent color={darkTheme.text_primary}>
+                {/* <TimelineOppositeContent color={darkTheme.text_primary}>
                     {education.date}
-                  </TimelineOppositeContent>
+                  </TimelineOppositeContent> */}
               </TimelineItem>
             ))}
           </Timeline>

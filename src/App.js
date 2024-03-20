@@ -8,6 +8,8 @@ import Education from "./Components/Education/Education";
 import { BrowserRouter } from "react-router-dom";
 import Experience from "./Components/Experience/Experience";
 import Projects from "Components/Projects/Projects";
+import Footer from "Components/Footer/Footer.jsx";
+import { useState } from "react";
 // import Kishan_hero from "Components/Kishan_hero";
 
 const StyledDiv = styled.div`
@@ -40,13 +42,13 @@ function App() {
         <NavigationBar />
         <StyledDiv>
           <Hero />
-          {/* <Kishan_hero /> */}
           <GradientWrapper>
-          <Projects />
+            <Projects />
             <Skills />
             <Experience />
             <Education />
-            </GradientWrapper>
+          </GradientWrapper>
+          <Footer />
         </StyledDiv>
       </BrowserRouter>
     </ThemeProvider>
