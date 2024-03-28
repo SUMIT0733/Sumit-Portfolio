@@ -26,18 +26,6 @@ export const Skills = [
     ],
   },
   {
-    title: "Programming",
-    skills: [
-      { name: "Java" },
-      { name: "Spring Boot" },
-      { name: "Android" },
-      { name: "Python" },
-      { name: "Hibernate/JPA" },
-      { name: "Maven" },
-      { name: "JSON" },
-    ],
-  },
-  {
     title: "Frontend",
     skills: [
       { name: "React Js" },
@@ -47,6 +35,18 @@ export const Skills = [
       { name: "JavaScript" },
       { name: "Bootstrap" },
       { name: "Material UI" },
+    ],
+  },
+  {
+    title: "Programming",
+    skills: [
+      { name: "Java" },
+      { name: "Spring Boot" },
+      { name: "Android" },
+      { name: "Python" },
+      { name: "Hibernate/JPA" },
+      { name: "Maven" },
+      { name: "JSON" },
     ],
   },
   {
@@ -147,23 +147,71 @@ export const Education_data = [
 
 export const projects = [
   {
+    id: 6,
+    title: "Wild Oasis",
+    image:
+      "https://drive.google.com/thumbnail?id=1lsMeax0gizpc3YXwmjzh9zSj3aElyRwG",
+    shortDesc:
+      "Wild Oasis is a React application to manage cabins and its bookings...",
+    description:
+      "Wild Oasis is a React application to manage Cabins and bookings. Admin can manage Cabins, Bookings, Check-in, check-out, settings for bookings, and centrlized dashboard for bookings and visulize the data using charts and graphs. Application is developed using React components, React Queries, Styled componenets and Material UI.",
+    tags: [
+      "React",
+      "Supabase",
+      "Material UI",
+      "React Query",
+      "Styled Components",
+      "Context API",
+    ],
+    category: "web app",
+    github: "https://github.com/SUMIT0733/Wild-Oasis",
+  },
+  {
+    id: 7,
+    title: "Pizza Mania",
+    image:
+      "https://drive.google.com/thumbnail?id=1mbfrfMx-DrJe3oV-LnLvzQDhgREtdR2P",
+    shortDesc:
+      "Pizza Mania is a React application to order pizza and track order...",
+    description:
+      "Pizza Mania is a React Application to order Pizza, place order and track orders. Additionally It also proved an setting to manage pizzas and manage their stocks and stock out. Application is developed using React components, React Queries, Tailwind CSS and Material UI.",
+    tags: [
+      "React",
+      "Supabase",
+      "Tailwind CSS",
+      "Material UI",
+      "React Query",
+      "Context API",
+    ],
+    category: "web app",
+    github: "https://github.com/SUMIT0733/Pizza-Mania",
+  },
+  {
     id: 0,
     title: "BVM IT (Android)",
-    // date: "Jun 2023 - Jul 2023",
+    image:
+      "https://drive.google.com/thumbnail?id=1mzuYFb_xFFE_vfvdYNpLkgdF7nc5S7ic",
     shortDesc:
       "Android applicaiton for efficient communication between faculties and students...",
     description:
       "BVM IT is a android application designed for faculties and students to communicate efficiently. It has features like document sharing, broadcast using SMS and in-app notifications that was implemented using Google Cloud messaging and group chat, etc. It is developed using Java, XML, Material UI and Google Firebase.",
-    image:
-      "https://drive.google.com/file/d/1cdlnAjomL-U6dYp6VdLpYa-IllGN1xC0/view?usp=sharing",
-    tags: ["Android", "Java", "XML", "Firebase", "Material UI"],
+    tags: [
+      "Android",
+      "Java",
+      "XML",
+      "Firebase",
+      "Material UI",
+      "Authentication",
+    ],
     category: "android app",
     github: "https://github.com/SUMIT0733/BVM_IT",
-    // webapp: "https://trackify.duckdns.org",
   },
   {
     id: 1,
     title: "FaultSafeGuard - Distributed System",
+    image:
+      "https://drive.google.com/thumbnail?id=1AbWypIo4YJHvUPAi-VKcNbb6zw5ifKiC",
+
     shortDesc:
       "Distributed java Application to manage Hospital appointment booking... ",
     description:
@@ -180,6 +228,9 @@ export const projects = [
   {
     id: 2,
     title: "Freelancelot",
+    image:
+      "https://drive.google.com/thumbnail?id=16w-rKEYtzLm17elizTXjNDZx2ZQgBljv",
+
     shortDesc:
       "Freelancelot is a application developed using Java Play(Akka) Framework...",
     description:
@@ -191,6 +242,9 @@ export const projects = [
   {
     id: 3,
     title: "Hunger On Train",
+    image:
+      "https://drive.google.com/thumbnail?id=1A9rWuO9F5anEz8bajyilenCDUugXn_MR",
+
     shortDesc:
       "HungerOnTrain is a Android application to deliver food on train station from restaurant...",
     description:
@@ -210,6 +264,8 @@ export const projects = [
   {
     id: 4,
     title: "SpringFlow Automator",
+    image:
+      "https://www.neurones-it.asia/wp-content/uploads/2019/11/DevOpslogo-1200x675.png",
     shortDesc:
       "DevOps project to demonstrate the skills to automate the CI/CD pipeline...",
     description:
@@ -221,6 +277,9 @@ export const projects = [
   {
     id: 5,
     title: "MYSY",
+    image:
+      "https://allhindiyojna.in/wp-content/uploads/2022/09/gujarat-mysy-scholarship.jpg",
+
     shortDesc:
       "MYSY is an andorid informative application to provide the details of scholarship...",
     description:
@@ -235,6 +294,27 @@ export const projects = [
     ],
     category: "android app",
     github: "https://github.com/SUMIT0733/Mysy1",
+  },
+  {
+    id: 8,
+    title: "Serverless Trip tracker",
+    image:
+      "https://miro.medium.com/v2/resize:fit:1858/1*AbVG9wBBOF2xCUdcEIo7Yw.png",
+
+    shortDesc:
+      "Serverless Trip tracker is developed using AWS Serverless tools...",
+    description:
+      "Serverless Trip tracker is developed using AWS Serverless tools like AWS Lambda, API Gateway, DynamoDB, S3, Cognito, etc., to track the trips and provide the details of the trip like duration, feedback and location of places, along with integrated with CloudFront CDN and Cloudwatch metrics to monitor the application.",
+    tags: [
+      "React",
+      "Supabase",
+      "Material UI",
+      "React Query",
+      "Styled Components",
+      "Context API",
+    ],
+    category: "web app",
+    // github: "https://github.com/SUMIT0733/Wild-Oasis",
   },
 ];
 

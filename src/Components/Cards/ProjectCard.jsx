@@ -206,7 +206,7 @@ const ProjectCard = ({ project }) => {
       <BackCard>
         <CloseButton onClick={() => flipCard()} />
         <FullDescription>{project.description}</FullDescription>
-        <GitHubButton href={project.github} target="_blank">GitHub</GitHubButton>
+        {project.github && <GitHubButton href={project.github} target="_blank">GitHub</GitHubButton>}
       </BackCard>
     </ReactCardFlip>
   );
