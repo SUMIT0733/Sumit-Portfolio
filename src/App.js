@@ -9,8 +9,6 @@ import { BrowserRouter } from "react-router-dom";
 import Experience from "./Components/Experience/Experience";
 import Projects from "Components/Projects/Projects";
 import Footer from "Components/Footer/Footer.jsx";
-import { useState } from "react";
-// import Kishan_hero from "Components/Kishan_hero";
 
 const StyledDiv = styled.div`
   background-color: ${({ theme }) => theme.bg};

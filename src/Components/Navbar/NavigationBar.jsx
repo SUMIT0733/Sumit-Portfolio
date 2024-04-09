@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { DiCssdeck } from "react-icons/di";
-import { HiBars3, HiXMark } from "react-icons/hi2";
+import { HiBars3, HiOutlineCodeBracket, HiXMark } from "react-icons/hi2";
 import { useEffect, useState } from "react";
+import { func } from "prop-types";
 
 const StyledNav = styled.div`
   background-color: ${({ theme }) => theme.card_light};
@@ -27,7 +28,7 @@ const StylednavContainer = styled.div`
   z-index: 1;
   width: 100%;
   padding: 0 24px;
-  max-width: 1400px;
+  max-width: 1200px;
 `;
 
 const StyledLogo = styled(Link)`
@@ -110,6 +111,7 @@ const StyledContact = styled.button`
   height: 70%;
   cursor: pointer;
   :hover {
+    transition: all 0.5s;
     background-color: ${({ theme }) => theme.primary};
     color: ${({ theme }) => theme.text_primary};
   }
@@ -154,6 +156,7 @@ const StyledMobileMenuItem = styled(Link)`
   }
 `;
 
+
 function NavigationBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -161,7 +164,7 @@ function NavigationBar() {
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
-      if (windowWidth > 768) {
+      if (windowWidth > 785) {
         setIsOpen(false); // Close the mobile menu when screen width increases beyond 768px
       }
     };
@@ -173,6 +176,9 @@ function NavigationBar() {
     };
   }, [windowWidth]);
 
+  function handleContactClick(){
+    window.open("https://www.linkedin.com/in/sumit0733/","_blank");
+  }
   return (
     <StyledNav>
       <StylednavContainer>
@@ -186,8 +192,8 @@ function NavigationBar() {
               cursor: "pointer",
             }}
           >
-            <DiCssdeck size="3rem" />
-            <StyledSpan>Logo</StyledSpan>
+            <HiOutlineCodeBracket size="2rem" />
+            <StyledSpan>{` Sumit Monapara`}</StyledSpan>
           </div>
         </StyledLogo>
         <StyledMobileIcon>
@@ -206,7 +212,7 @@ function NavigationBar() {
         </StyledNavMenu>
 
         <StyledButton>
-          <StyledContact>Contact</StyledContact>
+          <StyledContact onClick={handleContactClick}>Contact</StyledContact>
         </StyledButton>
       </StylednavContainer>
 

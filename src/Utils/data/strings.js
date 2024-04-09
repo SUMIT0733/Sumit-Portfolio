@@ -147,6 +147,26 @@ export const Education_data = [
 
 export const projects = [
   {
+    id: 10,
+    title: "Crypto Tracker",
+    image:
+      "https://drive.google.com/thumbnail?id=1lsMeax0gizpc3YXwmjzh9zSj3aElyRwG",
+    shortDesc:
+      "Wild Oasis is a React application to manage cabins and its bookings...",
+    description:
+      "Wild Oasis is a React application to manage Cabins and bookings. Admin can manage Cabins, Bookings, Check-in, check-out, settings for bookings, and centrlized dashboard for bookings and visulize the data using charts and graphs. Application is developed using React components, React Queries, Styled componenets and Material UI.",
+    tags: [
+      "React",
+      "Supabase",
+      "Material UI",
+      "React Query",
+      "Styled Components",
+      "Context API",
+    ],
+    category: "web app",
+    github: "https://github.com/SUMIT0733/Wild-Oasis",
+  },
+  {
     id: 6,
     title: "Wild Oasis",
     image:

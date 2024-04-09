@@ -21,28 +21,27 @@ const HeroContainer = styled.div`
   clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
 `;
 
-const HeroBg = styled.div`
+export const HeroBg = styled.div`
   position: absolute;
   display: flex;
   justify-content: end;
-  /* align-items: center; */
-  right: 0%;
-  bottom: 50;
-  top: 70%;
-  left: 50%;
-  
-  width: 85%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
   max-width: 1360px;
   overflow: hidden;
-  padding: 45xp 28px;
-  
+  padding: 0 30px;
+  top: 50%;
+  left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 
-  @media screen and (max-width: 960px) {
-    padding: 0px 0px;
+  @media (max-width: 960px) {
     justify-content: center;
+    padding: 0 0px;
   }
 `;
 
@@ -233,7 +232,7 @@ function Hero() {
         <HeroInnerContainer>
           <HeroInformation>
             <Title>
-              Hello, I am <br/>             
+              Hello, I am <br />
               {Bio.name}
             </Title>
             <TextLoop>
