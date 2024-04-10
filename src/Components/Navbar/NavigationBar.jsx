@@ -235,6 +235,12 @@ function NavigationBar() {
             About
           </StyledMobileMenuItemA>
           <StyledMobileMenuItemA
+            href="#projects"
+            onClick={() => setIsOpen((open) => !open)}
+          >
+            Projects
+          </StyledMobileMenuItemA>
+          <StyledMobileMenuItemA
             href="/#skills"
             onClick={() => setIsOpen((open) => !open)}
           >
@@ -246,12 +252,7 @@ function NavigationBar() {
           >
             Experience
           </StyledMobileMenuItemA>
-          <StyledMobileMenuItemA
-            href="#projects"
-            onClick={() => setIsOpen((open) => !open)}
-          >
-            Projects
-          </StyledMobileMenuItemA>
+          
           <StyledMobileMenuItemA
             href="#education"
             onClick={() => setIsOpen((open) => !open)}
