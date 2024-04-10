@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { DiCssdeck } from "react-icons/di";
 import { HiBars3, HiOutlineCodeBracket, HiXMark } from "react-icons/hi2";
 import { useEffect, useState } from "react";
-import { func } from "prop-types";
 
 const StyledNav = styled.div`
   background-color: ${({ theme }) => theme.card_light};
@@ -156,16 +154,6 @@ const StyledMobileMenuItemA = styled.a`
   }
 `;
 
-const StyledMobileMenuItem = styled(Link)`
-  color: ${({ theme }) => theme.text_primary};
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  &:hover {
-    color: ${({ theme }) => theme.primary};
-  }
-`;
 
 function NavigationBar() {
   const [isOpen, setIsOpen] = useState(false);
