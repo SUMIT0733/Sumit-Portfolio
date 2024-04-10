@@ -145,7 +145,7 @@ const StyledMobileMenu = styled.div`
   z-index: ${({ open }) => (open ? "1" : "-1")};
 `;
 
-const StyledMobileMenuItem = styled(Link)`
+const StyledMobileMenuItemA = styled.a`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
@@ -156,6 +156,16 @@ const StyledMobileMenuItem = styled(Link)`
   }
 `;
 
+const StyledMobileMenuItem = styled(Link)`
+  color: ${({ theme }) => theme.text_primary};
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  &:hover {
+    color: ${({ theme }) => theme.primary};
+  }
+`;
 
 function NavigationBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -176,8 +186,8 @@ function NavigationBar() {
     };
   }, [windowWidth]);
 
-  function handleContactClick(){
-    window.open("https://www.linkedin.com/in/sumit0733/","_blank");
+  function handleContactClick() {
+    window.open("https://www.linkedin.com/in/sumit0733/", "_blank");
   }
   return (
     <StyledNav>
@@ -218,42 +228,43 @@ function NavigationBar() {
 
       {isOpen && (
         <StyledMobileMenu open={isOpen}>
-          <StyledMobileMenuItem
-            to="about"
+          <StyledMobileMenuItemA
+            href="/#about"
             onClick={() => setIsOpen((open) => !open)}
           >
             About
-          </StyledMobileMenuItem>
-          <StyledMobileMenuItem
-            to="skills"
+          </StyledMobileMenuItemA>
+          <StyledMobileMenuItemA
+            href="/#skills"
             onClick={() => setIsOpen((open) => !open)}
           >
             Skills
-          </StyledMobileMenuItem>
-          <StyledMobileMenuItem
-            to="experience"
+          </StyledMobileMenuItemA>
+          <StyledMobileMenuItemA
+            href="#experience"
             onClick={() => setIsOpen((open) => !open)}
           >
             Experience
-          </StyledMobileMenuItem>
-          <StyledMobileMenuItem
-            to="projects"
+          </StyledMobileMenuItemA>
+          <StyledMobileMenuItemA
+            href="#projects"
             onClick={() => setIsOpen((open) => !open)}
           >
             Projects
-          </StyledMobileMenuItem>
-          <StyledMobileMenuItem
-            to="education"
+          </StyledMobileMenuItemA>
+          <StyledMobileMenuItemA
+            href="#education"
             onClick={() => setIsOpen((open) => !open)}
           >
             Education
-          </StyledMobileMenuItem>
-          <StyledMobileMenuItem
-            to="contact"
+          </StyledMobileMenuItemA>
+          <StyledMobileMenuItemA
+            href="https://www.linkedin.com/in/sumit0733/"
+            target="_blank"
             onClick={() => setIsOpen((open) => !open)}
           >
             Contact Me
-          </StyledMobileMenuItem>
+          </StyledMobileMenuItemA>
         </StyledMobileMenu>
       )}
     </StyledNav>

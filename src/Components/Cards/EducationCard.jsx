@@ -38,6 +38,11 @@ const Card = styled.div`
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
   }
+  @media only screen and (max-width: 921px) {
+    padding: 10px;
+    gap: 8px;
+    width: 500px;
+  }
   @media only screen and (max-width: 768px) {
     padding: 10px;
     gap: 8px;
@@ -95,12 +100,15 @@ const Degree = styled.div`
   }
 `;
 
-const Date = styled.div`
+const StyledDate = styled.div`
   font-size: 12px;
   font-weight: 400;
   color: ${({ theme }) => theme.text_secondary + 80};
   @media only screen and (max-width: 768px) {
     font-size: 10px;
+  }
+  @media screen and (min-width: 530px) {
+    display: none;
   }
 `;
 
@@ -121,7 +129,7 @@ function EducationCard({ education }) {
         <Body>
           <Name>{education.school}</Name>
           <Degree>{education.degree}</Degree>
-          <Date>{education.date}</Date>
+          <StyledDate>{education.date}</StyledDate>
         </Body>
       </Top>
       <Grade>

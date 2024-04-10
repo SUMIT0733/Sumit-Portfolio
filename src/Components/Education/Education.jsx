@@ -1,4 +1,12 @@
-import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineOppositeContent, TimelineSeparator } from "@mui/lab";
+import {
+  Timeline,
+  TimelineConnector,
+  TimelineContent,
+  TimelineDot,
+  TimelineItem,
+  TimelineOppositeContent,
+  TimelineSeparator,
+} from "@mui/lab";
 import styled from "styled-components";
 import { Education_data } from "../../Utils/data/strings";
 import EducationCard from "Components/Cards/EducationCard";
@@ -11,6 +19,7 @@ const Container = styled.div`
   position: relative;
   z-index: 1;
   align-items: center;
+  padding-top: 70px;
   padding: 0px 0px 60px 0px;
   @media (max-width: 960px) {
     padding: 0px;
@@ -25,10 +34,11 @@ const Wrapper = styled.div`
   flex-direction: column;
   width: 100%;
   max-width: 1250px;
-  padding: 40px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
   gap: 12px;
-  @media (max-width: 960px) {
+  @media (max-width: 921px) {
     flex-direction: column;
+    max-width: 700px;
   }
 `;
 
@@ -69,6 +79,12 @@ const TimelineSection = styled.div`
   }
 `;
 
+const StyledDate = styled.div`
+  @media (max-width: 530px) {
+    display: none;
+  }
+`;
+
 function Education() {
   return (
     <Container id="education">
@@ -81,7 +97,7 @@ function Education() {
 
         <></>
         <TimelineSection>
-          <Timeline >
+          <Timeline>
             {Education_data.map((education, index) => (
               <TimelineItem key={education.date}>
                 <TimelineContent sx={{ py: "12px", px: 2 }}>
@@ -93,9 +109,11 @@ function Education() {
                     <TimelineConnector style={{ background: "#854CE6" }} />
                   )}
                 </TimelineSeparator>
-                {/* <TimelineOppositeContent color={darkTheme.text_primary}>
+                <StyledDate>
+                  <TimelineOppositeContent color={darkTheme.text_primary}>
                     {education.date}
-                  </TimelineOppositeContent> */}
+                  </TimelineOppositeContent>
+                </StyledDate>
               </TimelineItem>
             ))}
           </Timeline>

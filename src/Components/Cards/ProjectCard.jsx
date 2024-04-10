@@ -164,10 +164,11 @@ const CloseButton = styled.div`
   position: absolute;
   top: 5px;
   right: 15px;
+  aspect-ratio: 1/1;
   cursor: pointer;
   &:after {
     content: "X";
-    color: ${({ theme }) => theme.text_secondary + 99};
+    color: #fff;
     font-size: 20px;
   }
 `;

@@ -17,8 +17,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   position: relative;
-  margin-top: 50px;
-  padding-top: 80px;
+  padding-top: 70px;
   padding-bottom: 50px;
   z-index: 1;
   align-items: center;
@@ -69,6 +68,9 @@ const TimeLineSection = styled.div`
   align-items: center;
   justify-content: center;
   gap: 12px;
+  @media screen and (max-width: 921px) {
+    max-width: calc(100% - 20);
+  }
 `;
 
 const StyledDate = styled.div`

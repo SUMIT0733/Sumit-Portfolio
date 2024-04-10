@@ -59,6 +59,10 @@ const Card = styled.div`
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
   }
+  @media screen and (max-width: 921px) {
+    padding: 10px;
+    width: 500px;
+  }
   @media only screen and (max-width: 768px) {
     padding: 10px;
     gap: 8px;

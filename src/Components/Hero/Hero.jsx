@@ -10,9 +10,9 @@ const HeroContainer = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 80px 30px;
+  padding:80px 30px 50px;
   @media (max-width: 960px) {
-    padding: 66px 16px;
+    padding: 66px 16px 30px;
   }
   @media (max-width: 640px) {
     padding: 32px 16px;

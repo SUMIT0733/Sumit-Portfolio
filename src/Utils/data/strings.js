@@ -40,7 +40,7 @@ export const Skills = [
   {
     title: "Programming",
     skills: [
-      { name: "Java" },
+      { name: "Java / Kotlin" },
       { name: "Spring Boot" },
       { name: "Android" },
       { name: "Python" },
@@ -150,27 +150,27 @@ export const projects = [
     id: 10,
     title: "Crypto Tracker",
     image:
-      "https://drive.google.com/thumbnail?id=1lsMeax0gizpc3YXwmjzh9zSj3aElyRwG",
+      "https://raw.githubusercontent.com/SUMIT0733/Sumit-Portfolio/master/coverPhotos/crypto.png",
     shortDesc:
-      "Wild Oasis is a React application to manage cabins and its bookings...",
+      "Crypto Tracker is a React Application to track and visualize the crypto currency data...",
     description:
-      "Wild Oasis is a React application to manage Cabins and bookings. Admin can manage Cabins, Bookings, Check-in, check-out, settings for bookings, and centrlized dashboard for bookings and visulize the data using charts and graphs. Application is developed using React components, React Queries, Styled componenets and Material UI.",
+      "Crypto Tracker is a React application to get to know about various Crypto currenccies along with their details and userful information. In addition to that, user can also visulize the price variation over time perio using graphs, and provides various useful links to know more about the currencies. Application is developed using React components, React Queries, Tailwind CSS, ReCharts, React-icons and Material UI.",
     tags: [
       "React",
-      "Supabase",
+      "ReCharts",
       "Material UI",
       "React Query",
-      "Styled Components",
-      "Context API",
+      "Tailwind CSS",
+      "React Icons",
     ],
     category: "web app",
-    github: "https://github.com/SUMIT0733/Wild-Oasis",
+    github: "https://github.com/SUMIT0733/Crypto-tracker",
   },
   {
     id: 6,
     title: "Wild Oasis",
     image:
-      "https://drive.google.com/thumbnail?id=1lsMeax0gizpc3YXwmjzh9zSj3aElyRwG",
+      "https://raw.githubusercontent.com/SUMIT0733/Sumit-Portfolio/master/coverPhotos/wild.png",
     shortDesc:
       "Wild Oasis is a React application to manage cabins and its bookings...",
     description:
@@ -190,7 +190,7 @@ export const projects = [
     id: 7,
     title: "Pizza Mania",
     image:
-      "https://drive.google.com/thumbnail?id=1mbfrfMx-DrJe3oV-LnLvzQDhgREtdR2P",
+      "https://raw.githubusercontent.com/SUMIT0733/Sumit-Portfolio/master/coverPhotos/pizza.png",
     shortDesc:
       "Pizza Mania is a React application to order pizza and track order...",
     description:
@@ -210,7 +210,7 @@ export const projects = [
     id: 0,
     title: "BVM IT (Android)",
     image:
-      "https://drive.google.com/thumbnail?id=1mzuYFb_xFFE_vfvdYNpLkgdF7nc5S7ic",
+      "https://raw.githubusercontent.com/SUMIT0733/Sumit-Portfolio/master/coverPhotos/bvm.jpg",
     shortDesc:
       "Android applicaiton for efficient communication between faculties and students...",
     description:
@@ -230,26 +230,26 @@ export const projects = [
     id: 1,
     title: "FaultSafeGuard - Distributed System",
     image:
-      "https://drive.google.com/thumbnail?id=1AbWypIo4YJHvUPAi-VKcNbb6zw5ifKiC",
+      "https://raw.githubusercontent.com/SUMIT0733/Sumit-Portfolio/master/coverPhotos/faultsafeguard-5ac7a305.png",
 
     shortDesc:
       "Distributed java Application to manage Hospital appointment booking... ",
     description:
-      "FaultSafeguard is a robust distributed system designed for efficient appointment mgmt, ensuring fault tolerance, reliability in scheduling processe and highly available to reduce the downtime in case of failure.",
+      "FaultSafeguard is a robust distributed system designed for efficient appointment management, ensuring fault tolerance, reliability in scheduling processe and highly available to reduce the downtime in case of failure. In addition to the availability, we have added steps to recover from the failed state to be in sychronized with other servers and database.",
     tags: [
       "Java",
       "Distributed System",
       "client-server communication",
       "web-socket",
     ],
-    category: "",
+    category: "web app",
     github: "https://github.com/SUMIT0733/dams",
   },
   {
     id: 2,
     title: "Freelancelot",
     image:
-      "https://drive.google.com/thumbnail?id=16w-rKEYtzLm17elizTXjNDZx2ZQgBljv",
+      "https://raw.githubusercontent.com/SUMIT0733/Sumit-Portfolio/master/coverPhotos/freelancelot-e796c7a3.png",
 
     shortDesc:
       "Freelancelot is a application developed using Java Play(Akka) Framework...",
@@ -263,7 +263,7 @@ export const projects = [
     id: 3,
     title: "Hunger On Train",
     image:
-      "https://drive.google.com/thumbnail?id=1A9rWuO9F5anEz8bajyilenCDUugXn_MR",
+      "https://raw.githubusercontent.com/SUMIT0733/Sumit-Portfolio/master/coverPhotos/hot.jpg",
 
     shortDesc:
       "HungerOnTrain is a Android application to deliver food on train station from restaurant...",
@@ -333,7 +333,7 @@ export const projects = [
       "Styled Components",
       "Context API",
     ],
-    category: "web app",
+    category: "devops",
     // github: "https://github.com/SUMIT0733/Wild-Oasis",
   },
 ];

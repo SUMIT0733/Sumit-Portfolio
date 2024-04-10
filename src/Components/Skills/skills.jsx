@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Bio, Skills } from "../../Utils/data/strings";
+import { Skills } from "../../Utils/data/strings";
 import { Tilt } from "react-tilt";
 
 const Container = styled.div`
@@ -8,7 +8,7 @@ const Container = styled.div`
   justify-content: center;
   position: relative;
   z-index: 1;
-  padding-top: 80px;
+  padding-top: 70px;
   align-items: center;
 `;
 
@@ -35,16 +35,6 @@ const Title = styled.div`
   @media (max-width: 768px) {
     margin-top: 12px;
     font-size: 32px;
-  }
-`;
-
-const Description = styled.div`
-  font-size: 18px;
-  text-align: center;
-  max-width: 900px;
-  color: ${({ theme }) => theme.text_secondary};
-  @media (max-width: 768px) {
-    font-size: 16px;
   }
 `;
 
@@ -111,15 +101,14 @@ const SkillTag = styled.div`
     padding: 6px 12px;
   }
   &:hover {
-    border: 1px solid #854ce6;
-    color: #854ce6;
+    border: 1px solid #fff;
+    color: #fff;
   }
 `;
 
 const SkillName = styled.p``;
 
 function skills() {
-  // console.log(Skills);
   return (
     <Container id="skills">
       <Wrapper>
@@ -127,8 +116,8 @@ function skills() {
         {/* <Description>{Bio.description}</Description> */}
         <SkillsContainer>
           {Skills.map((skill) => (
-            <Tilt>
-              <Skill key={skill.title}>
+            <Tilt options={{ perspective: 5000 }} key={skill.title}>
+              <Skill>
                 <SkillTitle>{skill.title}</SkillTitle>
                 <SkillTags>
                   {skill.skills.map((item) => (
