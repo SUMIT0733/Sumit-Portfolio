@@ -180,26 +180,33 @@ const ProjectCard = ({ project }) => {
     setIsFlipped(() => !isFlipped);
   }
 
+  function handleFlip(e) {
+    if (window.innerWidth <= 921) {
+      if (e.type === "click") {
+        flipCard();
+      }
+    } else {
+      if (e.type === "mouseenter") {
+        flipCard();
+      }
+    }
+  }
+
   return (
     <ReactCardFlip flipDirection="horizontal" isFlipped={isFlipped}>
       <Card>
         <Image src={project.image} />
         <Tags>
-          {project.tags?.map((tag, index) => (
+          {project.tags?.map((tag) => (
             <Tag key={tag}>{tag}</Tag>
           ))}
         </Tags>
         <Details>
           <Title>{project.title}</Title>
-          {/* <Date>{project.date}</Date> */}
           <Description>{project.shortDesc}</Description>
         </Details>
         <ButtonGroup>
-          <DescriptionButton
-            href={project.description}
-            target="_blank"
-            onMouseEnter={flipCard}
-          >
+          <DescriptionButton onMouseEnter={handleFlip} onClick={handleFlip}>
             Description
           </DescriptionButton>
         </ButtonGroup>
@@ -207,7 +214,11 @@ const ProjectCard = ({ project }) => {
       <BackCard>
         <CloseButton onClick={() => flipCard()} />
         <FullDescription>{project.description}</FullDescription>
-        {project.github && <GitHubButton href={project.github} target="_blank">GitHub</GitHubButton>}
+        {project.github && (
+          <GitHubButton href={project.github} target="_blank">
+            GitHub
+          </GitHubButton>
+        )}
       </BackCard>
     </ReactCardFlip>
   );
