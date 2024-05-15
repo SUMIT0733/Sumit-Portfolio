@@ -7,7 +7,7 @@ export const Bio = {
   linkedin: "https://www.linkedin.com/in/sumit0733/",
   gmail: "mailto:sumit.monapara@gmail.com",
   resume:
-    "https://drive.google.com/file/d/1I5GkS0pt7Y9l5eBVnCHt9vqsiDVTIq8-/view?usp=sharing",
+    "https://drive.google.com/file/d/1r7CmnK5YN3yvh8QzenU5WoaKCO8OfoRU/view?usp=sharing",
 };
 
 export const Skills = [
@@ -72,6 +72,22 @@ export const Skills = [
 ];
 
 export const Experiences = [
+  {
+    id: 3,
+    img: "https://media.licdn.com/dms/image/C4D0BAQHI8eau_bGX6g/company-logo_200_200/0/1678725748613/emerging_stacks_logo?e=1723680000&v=beta&t=_NUu9tM2NjA0-6WH8NgIP5ubp_NZCLCpfnOVT-79pd0",
+    role: "Devops Engineer",
+    company: "Emerging Stacks Inc.",
+    date: "Feb 2024 - Present",
+    desc: "Working on Software development and DevOps tools to deploy the apps on AWS Cloud.",
+    skills: [
+      "Jenkins",
+      "CI/CD",
+      "Docker",
+      "AWS",
+      "React.js",
+      "Kafka",
+    ],
+  },
   {
     id: 0,
     img: "https://media.licdn.com/dms/image/C4D0BAQE8O826hGKXKg/company-logo_200_200/0/1650891606820/whiteorangesoftware_logo?e=2147483647&v=beta&t=49W4cxgqQSuP-9roU1nJ_huf3ESVtq1-fNJPcvQytJM",
@@ -146,6 +162,25 @@ export const Education_data = [
 ];
 
 export const projects = [
+  {
+    id: 11,
+    title: "Day Decider",
+    image:
+      "https://raw.githubusercontent.com/SUMIT0733/Sumit-Portfolio/master/coverPhotos/DayDecider.png",
+    shortDesc:
+      "Day Decider is an adnroid application to plan your free day based on your location and weather...",
+    description:
+      "Day Decider is an adnroid application to plan your free day based on your preferences for activities, and using the preferences and weateher prediction for that location, utilized ChatGPT's text genration API to generate activity suggestions, and along with that using TicketMaster's API to get the nearby events and showing it on Google Map to provide better user experience.",
+    tags: [
+      "Android",
+      "Kotlin",
+      "Firebase",
+      "REST APIs",
+      "Google Maps SDK",
+      "Material Design"
+    ],
+    category: "android app",
+  },
   {
     id: 10,
     title: "Crypto Tracker",
@@ -338,10 +373,3 @@ export const projects = [
   },
 ];
 
-export const TimeLineData = [
-  { year: 2017, text: "Started my" },
-  { year: 2018, text: "Worked as a freelance developer" },
-  { year: 2019, text: "Founded JavaScript Mastery" },
-  { year: 2020, text: "Shared my projects with the world" },
-  { year: 2021, text: "Started my own platform" },
-];
