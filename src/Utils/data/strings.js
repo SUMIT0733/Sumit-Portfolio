@@ -75,7 +75,7 @@ export const Experiences = [
   {
     id: 3,
     img: "https://media.licdn.com/dms/image/C4D0BAQHI8eau_bGX6g/company-logo_200_200/0/1678725748613/emerging_stacks_logo?e=1723680000&v=beta&t=_NUu9tM2NjA0-6WH8NgIP5ubp_NZCLCpfnOVT-79pd0",
-    role: "Devops Engineer",
+    role: "Devops Engineer Intern",
     company: "Emerging Stacks Inc.",
     date: "Feb 2024 - Present",
     desc: "Working on Software development and DevOps tools to deploy the apps on AWS Cloud.",
@@ -287,10 +287,10 @@ export const projects = [
       "https://raw.githubusercontent.com/SUMIT0733/Sumit-Portfolio/master/coverPhotos/freelancelot-e796c7a3.png",
 
     shortDesc:
-      "Freelancelot is a application developed using Java Play(Akka) Framework...",
+      "Freelancelot is a web application developed using Java SpringBoot Framework...",
     description:
-      "Freelancelot is a Java Play(Akka) framework that utilizes Freelancer API to fetch the available projects, top clients, trending topics, and related APIs to implement Akka and testing using JUnit and Mockito.",
-    tags: ["Java", "Play Framework", "JUnit", "Mockito", "Rest API"],
+      "Designed and developed Freelancelot, a full-stack web application for analyzing freelancer APIs. Utilized Java Spring Boot to serve a REST API with React as the front end. Leveraged the RestTemplate within the Spring Boot framework to seamlessly develop and maintain the RESTful API, demonstrating proficiency in integrating with external APIs to retrieve and manage data efficiently",
+    tags: ["Java", "SpringBoot", "JUnit", "React.js", "Rest API"],
     category: "web application",
     github: "https://github.com/SUMIT0733/SOEN6441-creativecoders",
   },
