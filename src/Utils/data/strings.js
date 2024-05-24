@@ -77,7 +77,7 @@ export const Experiences = [
     img: "https://media.licdn.com/dms/image/C4D0BAQHI8eau_bGX6g/company-logo_200_200/0/1678725748613/emerging_stacks_logo?e=1723680000&v=beta&t=_NUu9tM2NjA0-6WH8NgIP5ubp_NZCLCpfnOVT-79pd0",
     role: "Devops Engineer Intern",
     company: "Emerging Stacks Inc.",
-    date: "Feb 2024 - Present",
+    date: "Jan 2024 - Present",
     desc: "Working on Software development and DevOps tools to deploy the apps on AWS Cloud.",
     skills: [
       "Jenkins",
